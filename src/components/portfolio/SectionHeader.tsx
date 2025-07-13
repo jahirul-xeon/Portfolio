@@ -21,7 +21,7 @@ export default function SectionHeader({
   centered = false
 }: SectionHeaderProps) {
   const itemVariants = {
-    hidden: { opacity: 0, y: 40, scale: 0.95 },
+    hidden: { opacity: 0, y: 40, scale: 1 },
     visible: {
       opacity: 1,
       y: 0,
@@ -55,7 +55,9 @@ export default function SectionHeader({
         whileHover={{ scale: 1.02 }}
         transition={{ type: "spring", stiffness: 300 }}
       >
-        <span className="bg-gradient-to-l from-indigo-600 via-purple-600 to-violet-600 dark:from-indigo-400 dark:via-purple-400 dark:to-violet-400 bg-clip-text text-transparent">
+        <span className="bg-gradient-to-l from-emerald-500 via-teal-500 to-teal-300
+                 dark:from-emerald-400 dark:via-teal-400 dark:to-teal-200
+                 bg-clip-text text-transparent">
           {heading}
         </span>
       </motion.h2>
@@ -64,7 +66,12 @@ export default function SectionHeader({
       {
         showUnderline && (
           <motion.div
-            className={`h-1 md:h-1.5 lg:h-2 bg-gradient-to-l from-indigo-600 via-purple-600 to-violet-600 dark:from-indigo-400 dark:via-purple-400 dark:to-violet-400 rounded-full mb-3 md:mb-4 lg:mb-6 ${centered ? 'mx-auto' : ''}`}
+            className={`h-1 md:h-1.5 lg:h-2
+                  bg-gradient-to-l from-emerald-500 via-teal-500 to-teal-300
+                  dark:from-emerald-400 dark:via-teal-400 dark:to-teal-200
+                  rounded-full mb-3 md:mb-4 lg:mb-6
+                  ${centered ? 'mx-auto' : ''}`}
+
             initial={{ width: 0 }}
             whileInView={{ width: 80 }}
             transition={{ duration: 1.5, delay: 0.5 }}

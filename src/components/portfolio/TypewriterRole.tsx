@@ -37,7 +37,7 @@ export default function TypewriterRole() {
     }, isDeleting ? 50 : 120);
 
     return () => clearTimeout(timeout);
-  }, [displayText, isDeleting, currentRoleIndex, roles]);
+  }, [displayText, isDeleting, currentRoleIndex]);
 
   return (
     <motion.div
@@ -46,9 +46,9 @@ export default function TypewriterRole() {
       animate={{ opacity: 1 }}
       transition={{ delay: 0.4 }}
     >
-      {/* Floating Orbital Elements */}
+      {/* Floating Orbs */}
       <motion.div
-        className="absolute top-0 right-16 w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg"
+        className="absolute top-0 right-16 w-2 h-2 bg-gradient-to-r from-teal-500 to-emerald-400 rounded-full shadow-lg"
         animate={{
           rotate: 360,
           scale: [1, 1.3, 1],
@@ -61,9 +61,8 @@ export default function TypewriterRole() {
           transformOrigin: "-60px 30px"
         }}
       />
-
       <motion.div
-        className="absolute bottom-2 left-12 w-1.5 h-1.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full shadow-lg"
+        className="absolute bottom-2 left-12 w-1.5 h-1.5 bg-gradient-to-r from-teal-500 to-emerald-400 rounded-full shadow-lg"
         animate={{
           rotate: -360,
           scale: [1, 1.4, 1],
@@ -77,23 +76,20 @@ export default function TypewriterRole() {
         }}
       />
 
-      {/* Enhanced Role Text Container */}
+      {/* Typewriter Container */}
       <motion.div
         className="relative overflow-hidden rounded-2xl px-6 py-3 min-w-[280px]"
         initial={{ scale: 0.8 }}
         animate={{ scale: 1 }}
         transition={{ delay: 0.6, type: "spring", stiffness: 200 }}
       >
-        {/* Animated Background Layers */}
+        {/* ✅ Theme-aware Animated Background */}
         <motion.div
-          className="absolute inset-0 rounded-2xl"
+          className="absolute inset-0 rounded-2xl "
           animate={{
-            background: [
-              "linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%)",
-              "linear-gradient(135deg, #8b5cf6 0%, #ec4899 50%, #f59e0b 100%)",
-              "linear-gradient(135deg, #ec4899 0%, #f59e0b 50%, #3b82f6 100%)",
-              "linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%)"
-            ]
+            background:
+                // "linear-gradient(135deg, #CCCCFF 0%, #ecd0ed 50%, #fdc7f6  100%)",
+                "linear-gradient(135deg, #56afb8 0%, #36a18f 50%, #008080 100%)"
           }}
           transition={{ duration: 8, repeat: Infinity }}
         />
@@ -111,7 +107,7 @@ export default function TypewriterRole() {
           }}
         />
 
-        {/* Geometric Pattern Overlay */}
+        {/* Dotted Overlay */}
         <motion.div
           className="absolute inset-0 opacity-20 rounded-2xl"
           animate={{ rotate: [0, 360] }}
@@ -123,7 +119,7 @@ export default function TypewriterRole() {
           <div className="absolute bottom-1 right-1 w-0.5 h-0.5 bg-white rounded-full" />
         </motion.div>
 
-        {/* Role Text */}
+        {/* Typewriter Text */}
         <div className="relative z-10 text-center">
           <motion.span
             className="text-white font-semibold text-left inline-block min-w-[200px]"
@@ -145,7 +141,7 @@ export default function TypewriterRole() {
           </motion.span>
         </div>
 
-        {/* Pulse Border Effect */}
+        {/* Pulse Border */}
         <motion.div
           className="absolute inset-0 rounded-2xl border border-white/20"
           animate={{
@@ -161,4 +157,4 @@ export default function TypewriterRole() {
       </motion.div>
     </motion.div>
   );
-} 
+}

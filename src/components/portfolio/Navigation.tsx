@@ -10,7 +10,8 @@ export default function Navigation() {
 
   return (
     <nav className="fixed top-0 md:top-4 w-full z-50 ">
-      <div className="md:max-w-fit md:border-2 md:rounded-full mx-auto px-7 py-2 bg-zinc-200/50 dark:bg-slate-900/50 backdrop-blur-3xl">
+      <div className="md:max-w-fit md:border-2 md:rounded-full mx-auto px-7 py-2  bg-white/70 dark:bg-[#56afb8]/30
+  backdrop-blur-3xl border border-gray-300 dark:border-[#56afb8]/50 transition-colors duration-300">
         <div className="flex justify-between items-center gap-10">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -55,28 +56,28 @@ export default function Navigation() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={toggleTheme}
-              className="p-2 rounded-full bg-gray-200 hover:bg-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 border border-gray-300 dark:border-gray-600 transition-all duration-300"
-              aria-label="Toggle theme"
-            >
-              {theme === "dark" ? (
-                <Icon
-                  icon="solar:sun-bold"
-                  className="text-yellow-500"
-                  width={20}
-                  height={20}
-                />
-              ) : (
-                <Icon
-                  icon="solar:moon-bold"
-                  className="text-blue-500"
-                  width={20}
-                  height={20}
-                />
-              )}
-            </motion.button>
-          </div>
+              className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700
+  border border-gray-300 dark:border-emerald-700 transition-all duration-30"
+              aria-label="Toggle theme">
+            {theme === "dark" ? (
+              <Icon
+                icon="solar:sun-bold"
+                className="text-yellow-500"
+                width={20}
+                height={20}
+              />
+            ) : (
+              <Icon
+                icon="solar:moon-bold"
+                className="text-blue-500"
+                width={20}
+                height={20}
+              />
+            )}
+          </motion.button>
         </div>
       </div>
-    </nav>
+    </div>
+    </nav >
   );
 }

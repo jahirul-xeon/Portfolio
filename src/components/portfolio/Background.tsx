@@ -16,23 +16,21 @@ export default function Background() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  // Reduce particle count on mobile
   const particleCount = isMobile ? 5 : 12;
-
-  // Reduce animation complexity on mobile
   const animationConfig = isMobile
     ? { duration: 12, ease: "linear" }
     : { duration: 8, ease: "easeInOut" };
 
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">
-      {/* Base gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-black" />
+      {/* 🌿 Mint pastel base gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-green-50 via-teal-50 to-emerald-50 dark:from-green-900 dark:via-teal-900 dark:to-emerald-900" />
 
-      {/* Animated gradient orbs - reduced blur on mobile */}
+      {/* 🍃 Mint pastel animated gradient orbs */}
       <motion.div
-        className={`absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-400/20 to-purple-500/20 dark:from-blue-500/30 dark:to-purple-600/30 rounded-full -z-10 ${isMobile ? 'blur-xl' : 'blur-3xl'
-          }`}
+        className={`absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-emerald-300/20 to-teal-400/20 dark:from-emerald-400/30 dark:to-teal-500/30 rounded-full -z-10 ${
+          isMobile ? 'blur-xl' : 'blur-3xl'
+        }`}
         animate={isMobile ? {
           x: [0, 50, 0],
           y: [0, -25, 0],
@@ -50,8 +48,9 @@ export default function Background() {
       />
 
       <motion.div
-        className={`absolute top-3/4 right-1/4 w-80 h-80 bg-gradient-to-r from-cyan-300/15 to-blue-400/15 dark:from-cyan-400/25 dark:to-blue-500/25 rounded-full ${isMobile ? 'blur-lg' : 'blur-3xl'
-          }`}
+        className={`absolute top-3/4 right-1/4 w-80 h-80 bg-gradient-to-r from-lime-300/15 to-emerald-400/15 dark:from-lime-400/25 dark:to-emerald-500/25 rounded-full ${
+          isMobile ? 'blur-lg' : 'blur-3xl'
+        }`}
         animate={isMobile ? {
           x: [0, -40, 0],
           y: [0, 30, 0],
@@ -71,7 +70,7 @@ export default function Background() {
 
       {!isMobile && (
         <motion.div
-          className="absolute top-1/2 right-1/3 w-72 h-72 bg-gradient-to-r from-purple-400/15 to-pink-400/15 dark:from-purple-500/20 dark:to-pink-500/20 rounded-full blur-3xl"
+          className="absolute top-1/2 right-1/3 w-72 h-72 bg-gradient-to-r from-teal-300/15 to-lime-300/15 dark:from-teal-400/20 dark:to-lime-400/20 rounded-full blur-3xl"
           animate={{
             x: [0, 120, 0],
             y: [0, -80, 0],
@@ -86,11 +85,11 @@ export default function Background() {
         />
       )}
 
-      {/* Reduced floating particles */}
+      {/* 🍀 Floating minty particles */}
       {Array.from({ length: particleCount }).map((_, i) => (
         <motion.div
           key={i}
-          className="absolute w-1 h-1 bg-blue-400/60 rounded-full"
+          className="absolute w-1 h-1 bg-emerald-400/60 rounded-full"
           style={{
             left: `${Math.random() * 100}%`,
             top: `${Math.random() * 100}%`,
@@ -109,15 +108,15 @@ export default function Background() {
         />
       ))}
 
-      {/* Simplified grid pattern overlay - only on desktop */}
+      {/* 🧩 Mint grid pattern (desktop only) */}
       {!isMobile && (
         <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.015]">
           <div
             className="w-full h-full"
             style={{
               backgroundImage: `
-                linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)
+                linear-gradient(rgba(16, 185, 129, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(16, 185, 129, 0.1) 1px, transparent 1px)
               `,
               backgroundSize: '60px 60px',
             }}
@@ -125,10 +124,10 @@ export default function Background() {
         </div>
       )}
 
-      {/* Simplified radial gradient overlay */}
+      {/* 🌫 Radial overlay */}
       <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-white/20 dark:to-black/15" />
 
-      {/* Remove noise texture on mobile for better performance */}
+      {/* 🌾 Optional noise overlay (desktop only) */}
       {!isMobile && (
         <div
           className="absolute inset-0 opacity-[0.01] mix-blend-overlay pointer-events-none"
@@ -139,4 +138,4 @@ export default function Background() {
       )}
     </div>
   );
-} 
+}

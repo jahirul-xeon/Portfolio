@@ -8,12 +8,12 @@ const experience = [
   {
     role: "Software Developer",
     company: "Upwork",
-    period: "January 2023 — Present",
+    period: "January 2024 — Present",
     type: "Freelance",
     companyIcon: "fa6-brands:square-upwork",
     companyColor: "from-green-500 to-green-600",
     description:
-      "Delivered high-quality projects across diverse domains, including web and mobile applications, API development, and cloud integrations (AWS, GCP).",
+      "Delivered high-quality projects across diverse domains, including web and mobile applications, API development.",
     achievements: [
       "Achieved Top-Rated status with a 93% job success score",
       "Completed 10+ projects focusing on scalable solutions",

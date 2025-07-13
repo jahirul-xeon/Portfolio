@@ -19,11 +19,11 @@ const AnimatedBackground = () => {
 
   useEffect(() => {
     const colors = [
-      "rgb(59, 130, 246)",   // blue-500
-      "rgb(139, 92, 246)",   // purple-500
-      "rgb(236, 72, 153)",   // pink-500
-      "rgb(16, 185, 129)",   // emerald-500
-      "rgb(245, 158, 11)",   // amber-500
+      "rgb(173, 216, 255)",  // light pastel blue
+      "rgb(203, 174, 255)",  // light pastel purple
+      "rgb(255, 182, 210)",  // light pastel pink
+      "rgb(167, 242, 208)",  // light pastel emerald/green
+      "rgb(255, 223, 153)",  // light pastel amber/yellow
     ];
 
     const initialParticles: Particle[] = Array.from({ length: 50 }, (_, i) => ({
@@ -97,8 +97,8 @@ const AnimatedBackground = () => {
 
   return (
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-purple-50/20 to-pink-50/30 dark:from-blue-950/30 dark:via-purple-950/20 dark:to-pink-950/30" />
+      {/* ✅ Updated Mint Pastel Background Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-green-100/40 via-teal-100/30 to-emerald-100/40 dark:from-green-800/30 dark:via-teal-800/20 dark:to-emerald-800/30" />
 
       {/* Geometric Shapes */}
       <div className="absolute inset-0">
@@ -111,7 +111,7 @@ const AnimatedBackground = () => {
             transition={{ delay: i * 0.2, duration: 2 }}
           >
             <motion.div
-              className={`w-${20 + i * 10} h-${20 + i * 10} border border-blue-500/20 dark:border-blue-400/20 rounded-full`}
+              className={`w-${20 + i * 10} h-${20 + i * 10} border border-teal-500/20 dark:border-teal-900/20 rounded-full`}
               style={{
                 left: `${10 + i * 15}%`,
                 top: `${5 + i * 10}%`,
@@ -181,8 +181,8 @@ const AnimatedBackground = () => {
         )}
         <defs>
           <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="rgb(59, 130, 246)" />
-            <stop offset="100%" stopColor="rgb(139, 92, 246)" />
+            <stop offset="0%" stopColor="rgb(203, 174, 255)" />
+            <stop offset="50%" stopColor="rgb(255, 182, 210)" />
           </linearGradient>
         </defs>
       </svg>
@@ -190,4 +190,4 @@ const AnimatedBackground = () => {
   );
 };
 
-export default AnimatedBackground; 
+export default AnimatedBackground;

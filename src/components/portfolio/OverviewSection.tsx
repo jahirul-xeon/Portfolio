@@ -94,7 +94,13 @@ export default function OverviewSection() {
           <motion.div variants={itemVariants} className="lg:col-span-8">
             <div className="space-y-6 md:space-y-8">
               {/* Introduction Card */}
-              <div className="relative p-4 md:p-6 lg:p-8 rounded-2xl md:rounded-3xl bg-gradient-to-br from-white/90 to-white/50 dark:from-gray-800/90 dark:to-gray-900/50 backdrop-blur-xl border border-white/30 dark:border-gray-700/40 shadow-2xl">
+              <div className="relative p-4 md:p-6 lg:p-8 rounded-2xl md:rounded-3xl
+                backdrop-blur-xl border border-emerald-300/30 dark:border-teal-800/40
+                shadow-2xl text-gray-900 dark:text-gray-100"
+                style={{
+                  background:
+                    "linear-gradient(135deg, rgba(80, 200, 120, 0.1) 0%, rgba(0, 128, 128, 0.4) 100%)"
+                }}>
                 {/* Decorative Elements */}
                 <div className="absolute top-4 md:top-6 right-4 md:right-6 w-3 md:w-4 h-3 md:h-4 bg-green-400 rounded-full animate-pulse"></div>
                 <div className="absolute top-4 md:top-6 right-10 md:right-14 w-2 md:w-3 h-2 md:h-3 bg-blue-400 rounded-full animate-pulse delay-300"></div>
@@ -130,11 +136,11 @@ export default function OverviewSection() {
                   {/* Expanded About Content */}
                   <div className="space-y-3 md:space-y-4 border-t border-gray-200/50 dark:border-gray-700/50 pt-4 md:pt-6">
                     <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
-                    Hello, World! I'm Jahirul Islam — a passionate Software Engineer with a focus on React Native and Web development. 
-                    I specialize in building high-performance, user-friendly applications with clean, maintainable code and thoughtful, intuitive UI/UX design. 
-                    Whether it's crafting smooth mobile experiences or responsive web interfaces, I'm dedicated to delivering impactful and engaging digital solutions.
+                      Hello, World! I'm Jahirul Islam — a passionate Software Engineer with a focus on React Native and Web development.
+                      I specialize in building high-performance, user-friendly applications with clean, maintainable code and thoughtful, intuitive UI/UX design.
+                      Whether it's crafting smooth mobile experiences or responsive web interfaces, I'm dedicated to delivering impactful and engaging digital solutions.
                     </p>
-                    
+
                   </div>
 
                   {/* Skills Highlight */}
@@ -150,17 +156,16 @@ export default function OverviewSection() {
                     </h4>
                     <div className="flex flex-wrap gap-2 md:gap-3">
                       {[
+                        "React Native",
+                        "Flutter",
+                        "Android",
+                        "IOS",
                         "OpenAI APIs",
-                        "LangChain",
                         "TypeScript",
                         "Next.js",
-                        "Node.js",
-                        "Nest.js",
-                        "WebSocket",
-                        "Meta APIs",
-                        "AWS & Azure",
+                        ".NET Core",
                         "Docker & GitHub Actions",
-                        "Vector Databases",
+                        "Postgress Databases",
                       ].map((skill, index) => (
                         <motion.span
                           key={skill}
@@ -169,12 +174,18 @@ export default function OverviewSection() {
                           transition={{ delay: 1.2 + index * 0.1 }}
                           whileHover={{ scale: 1.05, y: -1 }}
                           whileTap={{ scale: 0.95 }}
-                          className="px-3 md:px-4 py-1.5 md:py-2 text-xs md:text-sm font-medium bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/30 dark:to-purple-950/30 text-gray-800 dark:text-gray-200 rounded-lg md:rounded-xl border border-blue-200/50 dark:border-blue-800/30 hover:shadow-lg transition-all duration-300"
+                          className="px-3 md:px-4 py-1.5 md:py-2 text-xs md:text-sm font-medium
+                 text-black dark:text-gray-200 rounded-lg md:rounded-xl
+                 border border-gray-200 dark:border-teal-800
+                 bg-gradient-to-b from-white via-gray-100 to-gray-200 dark:from-emerald-500 dark:via-teal-600 dark:to-emerald-600
+                 hover:shadow-lg transition-all duration-300"
                         >
                           {skill}
                         </motion.span>
                       ))}
                     </div>
+
+
                   </div>
                 </div>
               </div>
@@ -184,7 +195,7 @@ export default function OverviewSection() {
                 <motion.div
                   variants={itemVariants}
                   whileHover={{ scale: 1.02, y: -5 }}
-                  className="p-4 md:p-6 rounded-xl md:rounded-2xl bg-gradient-to-br from-blue-50/80 to-blue-100/50 dark:from-blue-950/30 dark:to-blue-900/20 backdrop-blur-sm border border-blue-200/50 dark:border-blue-800/30 shadow-xl flex flex-col"
+                  className="p-4 md:p-6 rounded-xl md:rounded-2xl bg-gradient-to-br from-blue-50/80 to-blue-100/50 dark:from-emerald-950/30 dark:to-emerald-900/20 backdrop-blur-sm border border-emerald-200/50 dark:border-emerald-800/30 shadow-xl flex flex-col"
                 >
                   <div className="flex items-start gap-3 md:gap-4 mb-3 md:mb-4">
                     <div className="p-2 md:p-3 bg-blue-500 rounded-lg md:rounded-xl shadow-lg">
@@ -197,13 +208,13 @@ export default function OverviewSection() {
                     </div>
                     <div>
                       <h4 className="font-bold text-gray-900 dark:text-white text-base md:text-lg">
-                        Software Developer
+                        Software Engineer
                       </h4>
                       <p className="text-blue-600 dark:text-blue-400 font-medium text-sm md:text-base">
                         Upwork Freelancer
                       </p>
                       <p className="text-xs md:text-sm text-gray-600 dark:text-gray-400 mt-1">
-                        2023 — Present
+                        2024 — Present
                       </p>
                     </div>
                   </div>
@@ -220,7 +231,7 @@ export default function OverviewSection() {
                       height={16}
                     />
                     <span className="font-semibold text-green-600 dark:text-green-400">
-                      Top Rated • 93% Success Score
+                      Level 1 • 95% Success Score
                     </span>
                   </div>
                 </motion.div>
@@ -228,33 +239,31 @@ export default function OverviewSection() {
                 <motion.div
                   variants={itemVariants}
                   whileHover={{ scale: 1.02, y: -5 }}
-                  className="p-4 md:p-6 rounded-xl md:rounded-2xl bg-gradient-to-br from-green-50/80 to-green-100/50 dark:from-green-950/30 dark:to-green-900/20 backdrop-blur-sm border border-green-200/50 dark:border-green-800/30 shadow-xl flex flex-col"
+                  className="p-4 md:p-6 rounded-xl md:rounded-2xl bg-gradient-to-br from-green-50/80 to-green-100/50 dark:from-emerald-950/30 dark:to-emerald-900/20 backdrop-blur-sm border border-green-200/50 dark:border-green-800/30 shadow-xl flex flex-col"
                 >
                   <div className="flex items-start gap-3 md:gap-4 mb-3 md:mb-4">
-                    <div className="p-2 md:p-3 bg-green-500 rounded-lg md:rounded-xl shadow-lg">
-                      <Icon
-                        icon="solar:hospital-bold"
-                        className="text-white w-5 md:w-6 h-5 md:h-6"
-                        width={24}
-                        height={24}
+                    <div className="p-2 md:p-3 bg-white rounded-lg md:rounded-xl shadow-lg">
+                      <img
+                        src="\xeon-logo.png"
+                        alt="Xeon"
+                        className="w-6 h-6  "
                       />
                     </div>
+
                     <div>
                       <h4 className="font-bold text-gray-900 dark:text-white text-base md:text-lg">
-                        ZDSL
+                        Xeon technology Limited
                       </h4>
-                      <p className="text-green-600 dark:text-green-400 font-medium text-sm md:text-base">
-                        Full Stack Engineer
+                      <p className="text-emerald-600 dark:text-emerald-400 font-medium text-sm md:text-base">
+                        Software Engineer
                       </p>
                       <p className="text-xs md:text-sm text-gray-600 dark:text-gray-400 mt-1">
-                        2024 — Present
+                        2025 — Present
                       </p>
                     </div>
                   </div>
                   <p className="text-gray-700 dark:text-gray-300 text-xs md:text-sm leading-relaxed mb-2 md:mb-3 flex-1">
-                    Leading digital transformation in real-estate, developing
-                    automation tools for the business and CRM for the clients
-                    which is currently a SaaS product.
+                    Developed a cross-platform CRM and ERP system for real estate using React Native and Next.js. The CRM manages client interactions and sales pipelines, while the ERP streamlines internal operations and resource planning. Delivered as a SaaS product, it enables automation, scalability, and real-time access across web and mobile platforms.
                   </p>
                   <div className="flex items-center gap-2 text-xs md:text-sm mt-auto">
                     <Icon
@@ -264,7 +273,7 @@ export default function OverviewSection() {
                       height={16}
                     />
                     <span className="font-semibold text-blue-600 dark:text-blue-400">
-                      Real-Estate IT Specialist
+                      ERP Business Solution Specialist
                     </span>
                   </div>
                 </motion.div>
@@ -278,7 +287,7 @@ export default function OverviewSection() {
             className="lg:col-span-4 space-y-6 mt-6 lg:mt-0"
           >
             {/* Contact Card */}
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-purple-50/90 to-pink-50/90 dark:from-purple-950/30 dark:to-pink-950/30 backdrop-blur-sm border border-white/30 dark:border-gray-700/40 shadow-xl">
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-purple-50/90 to-pink-50/90 dark:from-emerald-800/30 dark:to-pink-950/30 backdrop-blur-sm border border-white/30 dark:border-gray-700/40 shadow-xl">
               <h4 className="font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
                 <Icon
                   icon="solar:chat-round-dots-bold"
@@ -290,7 +299,7 @@ export default function OverviewSection() {
               </h4>
               <div className="space-y-3">
                 <motion.a
-                  href="mailto:devhasibulislam@gmail.com"
+                  href="mailto:jahirul.islam0690@gmail.com"
                   whileHover={{ scale: 1.02, x: 4 }}
                   whileTap={{ scale: 0.98 }}
                   className="flex items-center gap-3 p-3 rounded-lg bg-white/70 dark:bg-gray-800/30 hover:bg-white/90 dark:hover:bg-gray-800/50 transition-all duration-300 group border border-white/20 dark:border-gray-700/30"
@@ -305,13 +314,13 @@ export default function OverviewSection() {
                   </div>
                   <div>
                     <div className="text-sm font-bold text-gray-900 dark:text-white break-all">
-                      devhasibulislam@gmail.com
+                      jahirul.islam0690@gmail.com
                     </div>
                   </div>
                 </motion.a>
 
                 <motion.a
-                  href="https://wa.me/8801906315901"
+                  href="https://wa.me/8801878836939"
                   whileHover={{ scale: 1.02, x: 4 }}
                   whileTap={{ scale: 0.98 }}
                   className="flex items-center gap-3 p-3 rounded-lg bg-white/70 dark:bg-gray-800/30 border border-white/20 dark:border-gray-700/30"
@@ -325,7 +334,7 @@ export default function OverviewSection() {
                   </div>
                   <div>
                     <div className="text-sm font-bold text-gray-900 dark:text-white">
-                      +8801906315901
+                      +8801878836939
                     </div>
                   </div>
                 </motion.a>
@@ -352,7 +361,7 @@ export default function OverviewSection() {
             </div>
 
             {/* Achievement Highlights */}
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-amber-50/90 to-yellow-50/90 dark:from-amber-950/30 dark:to-yellow-950/30 backdrop-blur-sm border border-white/30 dark:border-gray-700/40 shadow-xl">
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-amber-50/90 to-yellow-50/90 dark:from-emerald-950/30 dark:to-yellow-950/30 backdrop-blur-sm border border-white/30 dark:border-gray-700/40 shadow-xl">
               <h4 className="font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
                 <Icon
                   icon="solar:cup-star-bold"
@@ -366,17 +375,17 @@ export default function OverviewSection() {
                 {[
                   {
                     icon: "solar:star-bold",
-                    text: "Top Rated on Upwork",
+                    text: "Level 1 on Upwork",
                     color: "text-yellow-600",
                   },
                   {
                     icon: "solar:cpu-bolt-bold-duotone",
-                    text: "Expert in AI Integration",
+                    text: "Expert in React Native Application",
                     color: "text-blue-600",
                   },
                   {
                     icon: "solar:code-square-bold",
-                    text: "50+ Projects Delivered",
+                    text: "10+ Projects Delivered",
                     color: "text-green-600",
                   },
                 ].map((achievement, index) => (
@@ -433,7 +442,7 @@ export default function OverviewSection() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 2.4 }}
-                  className="flex items-center gap-3 p-3 rounded-lg bg-green-100/70 dark:bg-gray-800/30  transition-all duration-300 group border border-white/20 dark:border-gray-700/30"
+                  className="flex items-center gap-3 p-3 rounded-lg bg-green-300/70 dark:bg-gray-800/30  transition-all duration-300 group border border-white/20 dark:border-gray-700/30"
                 >
                   <Icon
                     icon="solar:clock-circle-bold"

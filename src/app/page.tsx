@@ -37,13 +37,13 @@ export default function Portfolio() {
         <ExperienceSection />
 
         {/* Projects Section */}
-        <ProjectsSection />
+        {/* <ProjectsSection /> */}
 
         {/* Testimonials Section */}
-        <TestimonialsSection />
+        {/* <TestimonialsSection /> */}
 
         {/* Certifications Section */}
-        <CertificationsSection />
+        {/* <CertificationsSection /> */}
 
         {/* Contact Section */}
         <ContactSection />

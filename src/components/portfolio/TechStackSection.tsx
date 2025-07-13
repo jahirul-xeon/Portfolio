@@ -17,28 +17,12 @@ interface TechItem {
 const techStackData: Record<string, TechItem[]> = {
   Backend: [
     {
-      name: "Node.js",
-      icon: "devicon:nodejs",
+      name: ".NET Core",
+      icon: "devicon:dotnetcore",
       level: "Expert",
       category: "Backend",
-      description: "JavaScript runtime for server-side applications",
-      yearsUsed: 5,
-    },
-    {
-      name: "Nest.js",
-      icon: "devicon:nestjs",
-      level: "Expert",
-      category: "Backend",
-      description: "Node.js framework for server-side applications",
-      yearsUsed: 4,
-    },
-    {
-      name: "Express",
-      icon: "skill-icons:expressjs-dark",
-      level: "Expert",
-      category: "Backend",
-      description: "Fast, minimalist web framework for Node.js",
-      yearsUsed: 5,
+      description: "Cross-platform .NET framework for backend services",
+      yearsUsed: 1,
     },
     {
       name: "GraphQL",
@@ -46,15 +30,15 @@ const techStackData: Record<string, TechItem[]> = {
       level: "Intermediate",
       category: "Backend",
       description: "Query language for APIs",
-      yearsUsed: 3,
+      yearsUsed: 1.5,
     },
     {
-      name: "Socket.io",
-      icon: "simple-icons:socketdotio",
-      level: "Intermediate",
+      name: "Firebase",
+      icon: "vscode-icons:file-type-firebase",
+      level: "Expert",
       category: "Backend",
-      description: "Real-time bidirectional event-based communication",
-      yearsUsed: 3,
+      description: "Google's backend-as-a-service platform",
+      yearsUsed: 2,
     },
   ],
   Frontend: [
@@ -64,7 +48,15 @@ const techStackData: Record<string, TechItem[]> = {
       level: "Expert",
       category: "Frontend",
       description: "Building modern, interactive user interfaces",
-      yearsUsed: 4,
+      yearsUsed: 2,
+    },
+    {
+      name: "React Native",
+      icon: "logos:react",
+      level: "Expert",
+      category: "Frontend",
+      description: "Building cross-platform mobile apps",
+      yearsUsed: 2,
     },
     {
       name: "Next.js",
@@ -72,7 +64,7 @@ const techStackData: Record<string, TechItem[]> = {
       level: "Expert",
       category: "Frontend",
       description: "Full-stack React framework for production apps",
-      yearsUsed: 3,
+      yearsUsed: 1,
     },
     {
       name: "TypeScript",
@@ -80,7 +72,7 @@ const techStackData: Record<string, TechItem[]> = {
       level: "Expert",
       category: "Frontend",
       description: "Type-safe JavaScript for scalable applications",
-      yearsUsed: 4,
+      yearsUsed: 2,
     },
     {
       name: "JavaScript",
@@ -88,7 +80,7 @@ const techStackData: Record<string, TechItem[]> = {
       level: "Expert",
       category: "Frontend",
       description: "Core language for web development",
-      yearsUsed: 5,
+      yearsUsed: 2,
     },
     {
       name: "Tailwind CSS",
@@ -96,7 +88,7 @@ const techStackData: Record<string, TechItem[]> = {
       level: "Expert",
       category: "Frontend",
       description: "Utility-first CSS framework for rapid UI development",
-      yearsUsed: 3,
+      yearsUsed: 2,
     },
   ],
   Database: [
@@ -106,7 +98,7 @@ const techStackData: Record<string, TechItem[]> = {
       level: "Expert",
       category: "Database",
       description: "Advanced open-source relational database",
-      yearsUsed: 3,
+      yearsUsed: 1.5,
     },
     {
       name: "MongoDB",
@@ -114,7 +106,7 @@ const techStackData: Record<string, TechItem[]> = {
       level: "Expert",
       category: "Database",
       description: "NoSQL document database",
-      yearsUsed: 3,
+      yearsUsed: 1,
     },
     {
       name: "MySQL",
@@ -130,15 +122,7 @@ const techStackData: Record<string, TechItem[]> = {
       level: "Intermediate",
       category: "Database",
       description: "In-memory data structure store",
-      yearsUsed: 2,
-    },
-    {
-      name: "Prisma",
-      icon: "skill-icons:prisma",
-      level: "Expert",
-      category: "Database",
-      description: "Next-generation ORM for Node.js and TypeScript",
-      yearsUsed: 2,
+      yearsUsed: 1,
     },
   ],
   "Cloud & DevOps": [
@@ -148,15 +132,7 @@ const techStackData: Record<string, TechItem[]> = {
       level: "Intermediate",
       category: "Cloud & DevOps",
       description: "Amazon Web Services cloud platform",
-      yearsUsed: 2,
-    },
-    {
-      name: "GCP",
-      icon: "skill-icons:gcp-light",
-      level: "Intermediate",
-      category: "Cloud & DevOps",
-      description: "Google Cloud Platform services",
-      yearsUsed: 2,
+      yearsUsed: 0.5,
     },
     {
       name: "Firebase",
@@ -190,22 +166,6 @@ const techStackData: Record<string, TechItem[]> = {
       level: "Expert",
       category: "AI & Integration",
       description: "AI-powered applications and chatbots",
-      yearsUsed: 2,
-    },
-    {
-      name: "LangChain",
-      icon: "simple-icons:langchain",
-      level: "Expert",
-      category: "AI & Integration",
-      description: "Framework for developing LLM applications",
-      yearsUsed: 1,
-    },
-    {
-      name: "Vercel AI SDK",
-      icon: "skill-icons:vercel-light",
-      level: "Expert",
-      category: "AI & Integration",
-      description: "Building AI-powered streaming UIs",
       yearsUsed: 1,
     },
     {
@@ -216,17 +176,9 @@ const techStackData: Record<string, TechItem[]> = {
       description: "Payment processing integration",
       yearsUsed: 2,
     },
-    {
-      // vector database
-      name: "Vector Database",
-      icon: "ph:vector-three-duotone",
-      level: "Intermediate",
-      category: "AI & Integration",
-      description: "Vector database for storing and querying embeddings",
-      yearsUsed: 1,
-    },
   ],
 };
+
 
 export default function TechStackSection() {
   const [activeCategory, setActiveCategory] = useState<string>("All");
@@ -262,11 +214,10 @@ export default function TechStackSection() {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                activeCategory === category
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${activeCategory === category
                   ? "bg-blue-600 text-white shadow-lg scale-105"
                   : "bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300"
-              }`}
+                }`}
             >
               {category}
             </button>
