@@ -32,9 +32,9 @@ export default function Navigation() {
                 "Overview",
                 "Stack",
                 "Experience",
-                "Projects",
-                "Testimonials",
-                "Certifications",
+                // "Projects",
+                // "Testimonials",
+                // "Certifications",
                 "Contact",
               ].map((item, index) => (
                 <motion.a
